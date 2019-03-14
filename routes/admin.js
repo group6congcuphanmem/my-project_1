@@ -64,11 +64,11 @@ passport.use(new LocalStrategy({
                 if(user){
                      return done(null, username);
                 }else{
-                   return done(null, false, { message: 'Tài Khoản Không Đúng' });
+                   return done(null, false, { message: 'Tài Khoản Bạn Nhập Không Đúng' });
                 }
             });
           }else{
-             return done(null, false, { message: 'Tài Khoản Không Đúng' });
+             return done(null, false, { message: 'Tài Khoản Bạn Nhập Không Đúng' });
           }
       });
   }
@@ -84,7 +84,7 @@ passport.use('local.signup',new LocalStrategy({
       return done(err);
     }
     if(user){
-      return done(null,false,{ message:'Email đã tồn tại' });
+      return done(null,false,{ message:'Email đã được sử dụng' });
     }
     var newUser =new User();
     newUser.email=email;
