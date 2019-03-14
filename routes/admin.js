@@ -130,4 +130,13 @@ function checkAdmin(req, res, next){
     }
 }
 
+
+function checkAdmin1(req, res, next){
+
+  if(req.isAuthenticated()){
+    next();
+  }else{
+    res.redirect('/admin/dang-nhap.html');
+  }
+}
 module.exports = router;
