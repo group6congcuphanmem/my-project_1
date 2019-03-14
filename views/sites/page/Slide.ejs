@@ -1,0 +1,34 @@
+
+       	  <div class="wmuSlider example1" style="height: 320px;">
+			  <div class="wmuSliderWrapper">
+          <% slides.forEach(function(data){%>
+				  <article style="position: absolute; width: 100%; opacity: 0;">
+				   	<div class="banner-wrap">
+					   	<div class="slider-left">
+							<img src="upload/<%=data.img%>" alt="">
+						</div>
+						 <div class="slider-right">
+						    <h2>Xem tiếp</h2>
+						    <h3><%= data.des1%></h3>
+						    <p><%= data.des2%></p>
+						    <!-- <div class="btn"><a href="shop.html">Shop Now</a></div> -->
+						 </div>
+						 <div class="clear"></div>
+					 </div>
+					</article>
+				<% });%>
+				</div>
+                <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a>
+                <ul class="wmuSliderPagination">
+                	<li><a href="#" class="">0</a></li>
+                	<li><a href="#" class="">1</a></li>
+                	<li><a href="#" class="wmuActive">2</a></li>
+                	<li><a href="#">3</a></li>
+                	<li><a href="#">4</a></li>
+                  </ul>
+                 <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a><ul class="wmuSliderPagination"><li><a href="#" class="wmuActive">0</a></li><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="">4</a></li></ul><a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a><ul class="wmuSliderPagination"><li><a href="#" class="">0</a></li><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="wmuActive">3</a></li><li><a href="#" class="">4</a></li></ul></div>
+            	 <script src="js/jquery.wmuSlider.js"></script>
+				 <script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+						<script>
+       						 $('.example1').wmuSlider();
+   						</script>
