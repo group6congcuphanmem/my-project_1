@@ -1,0 +1,18 @@
+<ul>
+  <% menu.forEach(function(data){%>
+  <li class="active"><a href="<%= data.meta%>.html">
+      <%= data.name%></a></li>
+  <%});%>
+  <li class="c-cart-toggler-wrapper">
+    <a href="/gio-hang.html" class="c-btn-icon c-cart-toggler">
+      <i class="glyphicon glyphicon-shopping-cart"></i>
+      <span class=""><%= session.cart.totalQty%> SP</span>
+    </a>
+  </li>
+  <li>
+    <a href="/admin"  class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="icon-user"></i>Đăng kí</a>
+  </li>
+  <li>
+    <a href="/admin"  class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="icon-user"></i>Đăng nhập</a>
+  </li>
+</ul>
