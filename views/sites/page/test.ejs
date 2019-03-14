@@ -1,0 +1,161 @@
+<%include ../layout/header.ejs%>
+<div class="header-top">
+  <div class="wrap">
+    <div class="logo">
+      <%include ../page/Logo %>
+    </div>
+    <div class="cssmenu">
+      <% include ../page/Menu %>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<%include ../page/Category %>
+<div class="clear"></div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+  .table&amp;
+  amp;
+  gt;
+  tbody&amp;
+  amp;
+  gt;
+  tr&amp;
+  amp;
+  gt;
+  td,
+  .table&amp;
+  amp;
+  gt;
+  tfoot&amp;
+  amp;
+  gt;
+  tr&amp;
+  amp;
+  gt;
+
+  td {
+    vertical-align: middle;
+  }
+
+  @media screen and (max-width: 600px) {
+    table#cart tbody td .form-control {
+      width: 20%;
+      display: inline !important;
+    }
+
+    .actions .btn {
+      width: 36%;
+      margin: 1.5em 0;
+    }
+
+    .actions .btn-info {
+      float: left;
+    }
+
+    .actions .btn-danger {
+      float: right;
+    }
+
+    table#cart thead {
+      display: none;
+    }
+
+    table#cart tbody td {
+      display: block;
+      padding: .6rem;
+      min-width: 320px;
+    }
+
+    table#cart tbody tr td:first-child {
+      background: #333;
+      color: #fff;
+    }
+
+    table#cart tbody td:before {
+      content: attr(data-th);
+      font-weight: bold;
+      display: inline-block;
+      width: 8rem;
+    }
+
+    table#cart tfoot td {
+      display: block;
+    }
+
+    table#cart tfoot td .btn {
+      display: block;
+    }
+  }
+</style>
+<div class="container">
+  <table id="cart" class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th style="width:50%">Tên sản phẩm</th>
+        <th style="width:10%">Giá</th>
+        <th style="width:8%">Số lượng</th>
+        <th style="width:22%" class="text-center">Thành tiền</th>
+        <th style="width:10%"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <%
+          const formatter = new Intl.NumberFormat('vn-VN', {
+
+            currency: 'VND',
+          });
+        %>
+      <% var total = 0; if(data){ data.forEach(function(item){ total += item.tien %>
+      <tr>
+        <td data-th="Product">
+          <div class="row">
+            <div class="col-sm-2 hidden-xs"><img src="upload/<%= item.item.img%>" alt="Sản phẩm 1" class="img-responsive" width="100">
+            </div>
+            <div class="col-sm-10">
+              <h4 class="nomargin">
+                <%= item.item.name%>
+              </h4>
+            </div>
+          </div>
+        </td>
+        <td data-th="Price">
+          <%= formatter.format(item.item.price) + 'đ' %></td>
+        <td data-th="Quantity"><input id="<%= item.item._id%>" class="form-control text-center" value="<%= item.soluong%>" type="number">
+        </td>
+        <td data-th="Subtotal" class="text-center">
+          <%= formatter.format(item.tien)+'đ' %>
+        </td>
+        <td class="total"> <a href="#"><img class="tooltip-test updateCart" id="<%= item.item._id%>" data-original-title="Update" src="img/update.png" alt=""></a>
+          <a href="#"><img class="tooltip-test delCart" id="<%= item.item._id%>" data-original-title="Remove" src="img/remove.png" alt=""></a></td>
+      </tr>
+      <%})}%>
+    </tbody>
+    <tfoot>
+
+      <tr>
+        <td><a href="/trang-chu.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+        </td>
+        <td colspan="2" class="hidden-xs"> </td>
+        <td class="hidden-xs text-center"><strong style="font-size:26px">Tổng tiền
+            <%= formatter.format(total)+'đ' %></strong>
+        </td>
+        <td><a href="/dat-hang.html" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<script>
+$('.Quantity').on('input',function(){
+  var $Quantity =$(this).val();
+  var $parent=$(this).parent('tr');
+  var $Price =$parent.find('.Price').text();
+  var $Subtotal=$parent.find('.Subtotal');
+  $Subtotal.text($Quantity*$Price);
+})  ;
+</script>
+<%include ../layout/footer.ejs%>

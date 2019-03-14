@@ -1,0 +1,103 @@
+        <% include ../playout/header.ejs %>
+        <!-- END TOPBAR -->
+        <!-- START CONTAINER -->
+        <div class="page-container row-fluid container-fluid">
+            <!-- SIDEBAR - START -->
+
+                 <% include ../playout/menu.ejs %>
+
+
+            <!--  SIDEBAR - END -->
+            <!-- START CONTENT -->
+            <section id="main-content" class=" ">
+            <section class="wrapper main-wrapper row" style=''>
+                <div class='col-xs-12'>
+                    <div class="page-title">
+                        <div class="pull-left">
+                            <h1 class="title">Thêm Slide</h1>
+                        </div>
+                        <div class="pull-right hidden-xs">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12">
+                    <section class="box ">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">Thông Tin</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <% if(success_msg != ''){ %>
+                                    <div class="alert alert-success"><%= success_msg%></div>
+                               <% } %>
+                                <% if(errors) { %>
+                                <div class="alert alert-danger">
+                                    <% errors.forEach(function(e){ %>
+
+                                        <%= e.msg %> <br/>
+                                    <%});%>
+
+                                </div>
+                                <% };%>
+                                <form action ="" method="post" enctype="multipart/form-data">
+                                    <div class="col-xs-12 col-sm-9 col-md-8 padding-bottom-30">
+                                        <div class="form-group">
+                                            <label class="form-label" for="field-120334">Tên Khuyến Mãi</label>
+                                            <span class="desc"></span>
+                                            <div class="controls">
+                                                <input type="text" id="name" value="" class="form-control" name="name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-8 padding-bottom-30">
+                                        <div class="form-group">
+                                            <label class="form-label" for="field-120334">Hình</label>
+                                            <span class="desc"></span>
+                                            <div class="controls">
+                                                <input type="file" id="hinh" value="" required="required" class="form-control" name="hinh">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-9 col-md-8 padding-bottom-30">
+                                        <div class="form-group">
+                                            <label class="form-label" for="field-120334">Mô tả 1</label>
+                                            <span class="desc"></span>
+                                            <div class="controls">
+                                                <textarea name="des" id="des1" class="form-control autogrow" cols="5" ></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-8 padding-bottom-30">
+                                        <div class="form-group">
+                                            <label class="form-label" for="field-120334">Mô tả 2 </label>
+                                            <span class="desc"></span>
+                                            <div class="controls">
+                                                <textarea name="des1" id="des2" class="form-control autogrow" cols="5" ></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-8 padding-bottom-30">
+                                        <div class="text-left">
+                                            <button type="submit" class="btn btn-primary">Lưu</button>
+                                            <button type="button" class="btn">Hủy bỏ</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                    </section>
+                    </div>
+            </section>
+        </section>
+            <!-- END CONTENT -->
+            <div class="chatapi-windows ">
+            </div>
+<% include ../playout/footer.ejs %>

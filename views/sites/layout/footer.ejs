@@ -1,0 +1,223 @@
+<div class="footer">
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="col_1_of_footer-top span_1_of_footer-top">
+        <ul class="f_list">
+          <li><img src="images/f_icon.png" alt=""><span class="delivery">FreeShip các đơn đặt hàng dưới 5km(trong thành phố)</span></li>
+        </ul>
+      </div>
+      <div class="col_1_of_footer-top span_1_of_footer-top">
+        <ul class="f_list">
+          <li><img src="images/f_icon1.png" alt=""><span class="delivery">Hỗ trợ 24/24: <span class="orange">0832210125 (Gặp A.Phong)</span></span></li>
+        </ul>
+      </div>
+      <div class="col_1_of_footer-top span_1_of_footer-top">
+        <ul class="f_list">
+          <li><img src="images/f_icon2.png" alt=""><span class="delivery">Giao hàng nhanh chóng & đổi trả miễn phí</span></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="footer-middle">
+    <div class="wrap">
+      <div class="section group">
+        <div class="col_1_of_middle span_1_of_middle">
+          <ul class="f_list1">
+            <li><span class="m_8">Tìm kiếm</span>
+              <div class="search">
+                <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                <input type="submit" value="Subscribe" id="submit" name="submit">
+                <div id="response"> </div>
+              </div>
+              <div class="clear"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <div class="section group">
+        <div class="col_1_of_5 span_1_of_5">
+          <h3 class="m_9">Danh mục</h3>
+          <ul class="sub_list">
+            <% cate.forEach(function(data){%>
+            <h4 class="m_10"> <a href="/danh-muc/<%=data.name %>.<%=data._id %>.html">
+                <%= data.name%></a></h4>
+            <%});%>
+          </ul>
+        </div>
+        <div class="col_1_of_5 span_1_of_5">
+          <h3 class="m_9">Địa chỉ shop</h3>
+          <ul class="">
+            <li><a href="https://www.google.com/maps/@10.8529793,106.782162,16z">TPHCM: Hẻm 12, đường 904, phường Hiệp Phú, Quận 9, TPHCM</a></li>
+            <li><a href="https://www.google.com/maps/place/12%2F79+%C4%90%C6%B0%E1%BB%9Dng+C%E1%BA%A7u+Gi%E1%BA%A5y,+Quan+Hoa,+C%E1%BA%A7u+Gi%E1%BA%A5y,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@21.0301252,105.7973769,17z/data=!3m1!4b1!4m5!3m4!1s0x3135ab414427dfa1:0x7de6ac1d5dfa41f6!8m2!3d21.0301202!4d105.7995656">Hà
+                Nội: Số 12, Cầu Giấy Hà Nội</a></li>
+          </ul>
+        </div>
+        <div class="col_1_of_5 span_1_of_5">
+          <h3 class="m_9">Liên hệ nhanh</h3>
+          <ul class="">
+            <li> <a href="tel: +84832210125">Gọi mua hàng: 0832210125</a></li>
+            <br>
+            <li><a href="shop.html">Gọi khiếu nại: 0832210125</a></li></br>
+            <li><a href="shop.html">Bảo hành - Hỗ trợ kĩ thuật: 0832210125</a></li>
+            <li><a href="shop.html"></a></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <div class="wrap">
+      <p>Phát triển bởi <a href="https://www.facebook.com/profile.php?id=100005167903138">Thanh Phong MTP</a></p>
+    </div>
+  </div>
+</div>
+<!--  jango-->
+<script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/jquery.easing.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/reveal-animate/wow.js" type="text/javascript"></script>
+<script src="../../assets/demos/default/js/scripts/reveal-animate/reveal-animate.js" type="text/javascript"></script>
+
+<script src="../../assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="../../assets/plugins/slider-for-bootstrap/js/bootstrap-slider.js" type="text/javascript"></script>
+<script src="../../assets/plugins/js-cookie/js.cookie.js" type="text/javascript"></script>
+
+<script src="../../assets/base/js/components.js" type="text/javascript"></script>
+<script src="../../assets/base/js/components-shop.js" type="text/javascript"></script>
+<script src="../../assets/base/js/app.js" type="text/javascript"></script>
+<script>
+  $(document).ready(function() {
+    App.init();
+  });
+</script>
+<script src="../../assets/plugins/zoom-master/jquery.zoom.min.js" type="text/javascript"></script>
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '../../../../../www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-64667612-1', 'themehats.com');
+  ga('send', 'pageview'); <
+  script src = "js/jquery.js" >
+</script>
+<script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" charset="utf-8"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/application.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script defer src="js/jquery.fancybox.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.tweet.js"></script>
+<script src="js/cloud-zoom.1.0.2.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script defer src="js/custom.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    menu();
+    $('.updateCart').click(function() {
+      var id = $(this).attr('id');
+      var soluong = parseInt($('#' + id).val());
+      if (soluong > 0) {
+        $.post(
+          './updateCart', {
+            id: id,
+            soluong: soluong
+          },
+          function(data) {
+            if (data.st == 1) location.href = "gio-hang.html";
+          }
+        ), 'json';
+      }
+    });
+
+    $('.delCart').click(function() {
+      var id = $(this).attr('id');
+      $.post(
+        './delCart', {
+          id: id
+        },
+        function(data) {
+
+          if (data.st == 1) location.href = "gio-hang.html";
+        }
+      ), 'json';
+
+    });
+  });
+
+  function menu() {
+    $.post(
+      './menu', {
+
+      },
+      function(data) {
+        var classMenu = '';
+        var hash = location.pathname;
+        if (hash == '/') var menu = '<li><a class="active" href="/" >Home</a></li>';
+        else var menu = '<li><a  href="/">Home</a></li>';
+        data.forEach(function(item) {
+          var urlMenu = '/cate/' + item.nameKhongDau + '.' + item._id + '.html';
+          var pathName = location.pathname;
+          pathName = pathName.split('.')[2];
+          menu += '<li><a  href="' + urlMenu + '" ';
+          if (urlMenu == hash || item._id == pathName) menu += 'class="active"';
+          menu += '>' + item.name + '</a></li>';
+        });
+        $('#categorymenu ul.categorymenu').html(menu);
+      }
+    );
+  }
+</script>
+<div style="width: 100%; height: 200px; padding: 20px; background: #f7f7f7; overflow: auto;"><span style="color: #0000ff;">
+    <script type="&lt;span style=" color:="" ff0000="">// <![CDATA[
+text/javascript</span>"></span><br>function showHidechatbox(){var t=document.getElementById("chatbox"),o=t.offsetWidth;t.opened?movechatbox(0,19-o):movechatbox(19-o,0),t.opened=!t.opened; t.opened?$('#coccoc-alo-phoneIcon').hide():($('#coccoc-alo-phoneIcon').show());}function movechatbox(t,o){var a=document.getElementById("chatbox"),e=Math.abs(t-o)>10?5:1,n=o>t?1:-1,i=t+e*n;a.style.right=i.toString()+"0px",t!=o&&setTimeout("movechatbox("+i+", "+o+")",1)}<br><span style="color: #0000ff;">
+// ]]></script>
+  </span><br /><span style="color: #0000ff;</span>" &gt;<br /><span style="color: #0000ff;</span>" &gt;<br />
+  <div id="coccoc-alo-phoneIcon" class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" style="position: fixed; right: 0px; bottom: 0px; display: block; transform: scale(1, 1); transform-origin: left top 0px;">
+    <div class="coccoc-alo-ph-circle-time"><img id="coccoc-alo-external-site-favicon" /> <span id="coccoc-alo-external-site-counter"></span></div>
+    <canvas id="stopwatch"></canvas>
+    <div class="coccoc-alo-ph-circle">&nbsp;</div>
+    <div class="coccoc-alo-ph-circle-fill">&nbsp;</div>
+    <a href="tel: +84832210125">
+      <div class="coccoc-alo-ph-img-circle coccoc-alo-ph-circle-shake">&nbsp;</div>
+    </a>
+    <div class="coccoc-alo-ph-circle-close">&nbsp;</div>
+  </div>
+  <br />
+  <div id="chatbox" style="right: -230px;"><br /> <br />
+    <div class="chatboxtab">&nbsp;</div>
+    <br />
+    <br /> <span style="color: #0000ff;">
+      <script>
+        // <![CDATA[
+        </span>/ / showHidechatbox() < span style = "color: #0000ff;" >
+        // ]]>
+      </script>
+    </span>
+  </div>
+</div>
+</body>
+</html>
