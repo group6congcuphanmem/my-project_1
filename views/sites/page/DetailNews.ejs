@@ -1,0 +1,377 @@
+<% include ../layout/header.ejs %>
+<!-- Load Facebook SDK for JavaScript -->
+<!-- Your customer chat code -->
+<div class="fb-customerchat" attribution=setup_tool page_id="430302940746026">
+</div>
+<div class="header-top">
+  <div class="wrap">
+    <div class="logo">
+      <%include ../page/Logo %>
+    </div>
+    <div class="cssmenu">
+      <% include ../page/Menu %>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<%include ../page/Category %>
+<div class="clear"></div>
+
+<div class="modal fade c-content-login-form" id="signup-form" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content c-square">
+      <div class="modal-header c-no-border">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="c-font-24 c-font-sbold">Create An Account</h3>
+        <p>Please fill in below form to create an account with us</p>
+        <form>
+          <div class="form-group">
+            <label for="signup-email" class="hide">Email</label>
+            <input type="email" class="form-control input-lg c-square" id="signup-email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="signup-username" class="hide">Username</label>
+            <input type="email" class="form-control input-lg c-square" id="signup-username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="signup-fullname" class="hide">Fullname</label>
+            <input type="email" class="form-control input-lg c-square" id="signup-fullname" placeholder="Fullname">
+          </div>
+          <div class="form-group">
+            <label for="signup-country" class="hide">Country</label>
+            <select class="form-control input-lg c-square" id="signup-country">
+              <option value="1">Country</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Signup</button>
+            <a href="javascript:;" class="c-btn-forgot" data-toggle="modal" data-target="#login-form" data-dismiss="modal">Back To Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div><!-- END: CONTENT/USER/SIGNUP-FORM -->
+<!-- BEGIN: CONTENT/USER/LOGIN-FORM -->
+<div class="modal fade c-content-login-form" id="login-form" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content c-square">
+      <div class="modal-header c-no-border">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="c-font-24 c-font-sbold">Good Afternoon!</h3>
+        <p>Let's make today a great day!</p>
+        <form>
+          <div class="form-group">
+            <label for="login-email" class="hide">Email</label>
+            <input type="email" class="form-control input-lg c-square" id="login-email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="login-password" class="hide">Password</label>
+            <input type="password" class="form-control input-lg c-square" id="login-password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <div class="c-checkbox">
+              <input type="checkbox" id="login-rememberme" class="c-check">
+              <label for="login-rememberme" class="c-font-thin c-font-17">
+                <span></span>
+                <span class="check"></span>
+                <span class="box"></span>
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Login</button>
+            <a href="javascript:;" data-toggle="modal" data-target="#forget-password-form" data-dismiss="modal" class="c-btn-forgot">Forgot Your Password ?</a>
+          </div>
+          <div class="clearfix">
+            <div class="c-content-divider c-divider-sm c-icon-bg c-bg-grey c-margin-b-20">
+              <span>or signup with</span>
+            </div>
+            <ul class="c-content-list-adjusted">
+              <li>
+                <a class="btn btn-block c-btn-square btn-social btn-twitter">
+                  <i class="fa fa-twitter"></i>
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a class="btn btn-block c-btn-square btn-social btn-facebook">
+                  <i class="fa fa-facebook"></i>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a class="btn btn-block c-btn-square btn-social btn-google">
+                  <i class="fa fa-google"></i>
+                  Google
+                </a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer c-no-border">
+        <span class="c-text-account">Don't Have An Account Yet ?</span>
+        <a href="javascript:;" data-toggle="modal" data-target="#signup-form" data-dismiss="modal" class="btn c-btn-dark-1 btn c-btn-uppercase c-btn-bold c-btn-slim c-btn-border-2x c-btn-square c-btn-signup">Signup!</a>
+      </div>
+    </div>
+  </div>
+</div><!-- END: CONTENT/USER/LOGIN-FORM -->
+
+<div class="c-layout-page">
+  <!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+
+  <div class="c-layout-breadcrumbs-1 c-fonts-uppercase c-fonts-bold c-bordered c-bordered-both">
+    <div class="container">
+      <div class="c-page-title c-pull-left">
+        <h3 class="c-font-uppercase c-font-sbold">TIN CÔNG NGHỆ</h3>
+      </div>
+      <ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
+        <li><a href="#">Trang</a></li>
+        <li>/</li>
+        <li><a href="page-blog-grid.html">Chi tiết tin tức</a></li>
+
+      </ul>
+    </div>
+  </div><!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+  <!-- BEGIN: PAGE CONTENT -->
+  <!-- BEGIN: BLOG LISTING -->
+  <div class="c-content-box c-size-md">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <!-- BEGIN: CONTENT/BLOG/BLOG-SIDEBAR-1 -->
+          <form action="#" method="post">
+            <div class="input-group">
+              <input type="text" class="form-control c-square c-theme-border" placeholder="Tìm kiếm....">
+              <span class="input-group-btn">
+                <button class="btn c-theme-btn c-theme-border c-btn-square" type="button">Tìm</button>
+              </span>
+            </div>
+          </form>
+
+          <div class="c-content-ver-nav">
+            <div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
+              <h3 class="c-font-bold c-font-uppercase">Categories</h3>
+              <div class="c-line-left c-theme-bg"></div>
+            </div>
+            <ul class="c-menu c-arrow-dot1 c-theme">
+              <li><a href="#">Web Development(2)</a></li>
+              <li><a href="#">UX Design(12)</a></li>
+              <li><a href="#">Mobile Development(5)</a></li>
+              <li><a href="#">Internet Marketing(7)</a></li>
+              <li><a href="#">Social Networks(11)</a></li>
+              <li><a href="#">Web Design(18)</a></li>
+            </ul>
+          </div>
+
+          <div class="c-content-tab-1 c-theme c-margin-t-30">
+            <div class="nav-justified">
+              <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#blog_recent_posts" data-toggle="tab">Recent Posts</a></li>
+                <li><a href="#blog_popular_posts" data-toggle="tab">Popular Posts</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="blog_recent_posts">
+                  <ul class="c-content-recent-posts-1">
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/09.jpg" alt="" class="img-responsive">
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/08.jpg" alt="" class="img-responsive">
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/07.jpg" alt="" class="img-responsive">
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/32.jpg" alt="" class="img-responsive">
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane" id="blog_popular_posts">
+                  <ul class="c-content-recent-posts-1">
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/34.jpg" class="img-responsive" alt="" />
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/37.jpg" class="img-responsive" alt="" />
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/32.jpg" class="img-responsive" alt="" />
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="c-image">
+                        <img src="../../assets/base/img/content/stock/54.jpg" class="img-responsive" alt="" />
+                      </div>
+                      <div class="c-post">
+                        <a href="#" class="c-title">
+                          UX Design Expo 2015...
+                        </a>
+                        <div class="c-date">27 Jan 2015</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="c-content-ver-nav">
+            <div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
+              <h3 class="c-font-bold c-font-uppercase">Blogs</h3>
+              <div class="c-line-left c-theme-bg"></div>
+            </div>
+            <ul class="c-menu c-arrow-dot c-theme">
+              <li><a href="#">Fasion & Arts</a></li>
+              <li><a href="#">UX & Web Design</a></li>
+              <li><a href="#">Mobile Development</a></li>
+              <li><a href="#">Internet Marketing</a></li>
+              <li><a href="#">Frontend Development</a></li>
+            </ul>
+          </div><!-- END: CONTENT/BLOG/BLOG-SIDEBAR-1 -->
+        </div>
+
+        <div class="col-md-9">
+          <div class="c-content-blog-post-1-view">
+            <div class="c-content-blog-post-1">
+              <div class="c-media">
+                <div class="c-content-media-2-slider" data-slider="owl">
+                  <div class="owl-carousel owl-theme c-theme owl-single" data-rtl="false" data-single-item="true" data-auto-play="4000">
+                    <div class="item">
+                      <div class="c-content-media-2" style="background-image: url(/upload/<%=data.img%>); min-height: 460px;">
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="c-content-media-2" style="background-image: url(/upload/<%=data.img1%>); min-height: 460px;">
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="c-content-media-2" style="background-image: url(/upload/<%=data.img2%>); min-height: 460px;">
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-title c-font-bold c-font-uppercase">
+                <a href="#">
+                  <%=data.name%></a>
+              </div>
+
+              <div class="c-panel c-margin-b-30">
+                <div class="c-author"><a href="https://www.facebook.com/profile.php?id=100005167903138">Người đăng: <span class="c-font-uppercase">
+                      <%= data.author%></span></a></div>
+                <div class="c-date">Ngày đăng: <span class="c-font-uppercase">
+                    <%= data.date%></span></div>
+
+                <!-- <div class="c-comments"><a href="#"><i class="icon-speech"></i> 30 comments</a></div> -->
+              </div>
+
+              <div class="c-desc">
+                <p>
+                  <%- data.des1%>
+                </p>
+              </div>
+
+              <div class="c-comments">
+
+                <div class="c-content-title-1">
+                  <h2 class="c-font-uppercase c-font-bold">Bình luận về bài viết này</h2>
+                  <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/<%= data._id %>" data-width="auto" data-numposts="8"></div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="c-margin-t-20"></div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- <script type="text/javascript" src="jquery.shorten.1.0.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+  $(".description p").text(function(index, currentText) {
+    var maxLength = $(this).parent().attr('data-maxlength');
+    var xemthem = "<a href><a>";
+    if (currentText.length >= maxLength) {
+      return currentText.substr(0, maxLength) + "...Xem Thêm";
+    } else {
+      return currentText
+    }
+  });
+</script>
+<% include ../layout/footer.ejs %>

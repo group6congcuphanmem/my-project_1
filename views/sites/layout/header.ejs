@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/phone.css">
+  <link rel="stylesheet" href="css/coccoc_alo.css">
+  <link rel="stylesheet" href="css/support.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+  <!-- jango -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
+  <link href="../../assets/plugins/socicon/socicon.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/bootstrap-social/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/animate/animate.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!-- END GLOBAL MANDATORY STYLES -->
+  <!-- BEGIN: BASE PLUGINS  -->
+  <link href="../../assets/plugins/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/plugins/slider-for-bootstrap/css/slider.css" rel="stylesheet" type="text/css" />
+  <!-- END: BASE PLUGINS -->
+  <!-- BEGIN THEME STYLES -->
+  <link href="../../assets/demos/default/css/plugins.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/demos/default/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+  <link href="../../assets/demos/default/css/themes/default.css" rel="stylesheet" id="style_theme" type="text/css" />
+  <link href="../../assets/demos/default/css/custom.css" rel="stylesheet" type="text/css" />
+  <!-- END THEME STYLES -->
+  <link rel="shortcut icon" href="../../images/favicon.ico" />
+  <!-- jango -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="../css/form.css" rel="stylesheet" type="text/css" media="all" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".dropdown img.flag").addClass("flagvisibility");
+
+      $(".dropdown dt a").click(function() {
+        $(".dropdown dd ul").toggle();
+      });
+
+      $(".dropdown dd ul li a").click(function() {
+        var text = $(this).html();
+        $(".dropdown dt a span").html(text);
+        $(".dropdown dd ul").hide();
+        $("#result").html("Selected value is: " + getSelectedValue("sample"));
+      });
+
+      function getSelectedValue(id) {
+        return $("#" + id).find("dt a span.value").html();
+      }
+
+      $(document).bind('click', function(e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("dropdown"))
+          $(".dropdown dd ul").hide();
+      });
+
+
+      $("#flagSwitcher").click(function() {
+        $(".dropdown img.flag").toggleClass("flagvisibility");
+      });
+    });
+  </script>
+  <!-- start menu -->
+  <link href="../css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <base href="http://localhost:3000/">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/flexslider.css" type="text/css" media="screen" rel="stylesheet" />
+  <link href="css/jquery.fancybox.css" rel="stylesheet">
+  <link href="css/cloud-zoom.css" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/ico/favicon.html">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Shop Thanh Phong</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".dropdown img.flag").addClass("flagvisibility");
+
+      $(".dropdown dt a").click(function() {
+        $(".dropdown dd ul").toggle();
+      });
+
+      $(".dropdown dd ul li a").click(function() {
+        var text = $(this).html();
+        $(".dropdown dt a span").html(text);
+        $(".dropdown dd ul").hide();
+        $("#result").html("Selected value is: " + getSelectedValue("sample"));
+      });
+
+      function getSelectedValue(id) {
+        return $("#" + id).find("dt a span.value").html();
+      }
+
+      $(document).bind('click', function(e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("dropdown"))
+          $(".dropdown dd ul").hide();
+      });
+
+
+      $("#flagSwitcher").click(function() {
+        $(".dropdown img.flag").toggleClass("flagvisibility");
+      });
+    });
+  </script>
+  <!-- start menu -->
+  <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="js/megamenu.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".megamenu").megamenu();
+    });
+  </script>
+  <!-- end menu -->
+  <!-- top scrolling -->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1200);
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+      };
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1013636048828102&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12&appId=193389631270223&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+  <div class="drag-wrapper drag-wrapper-right">
+    <div data-drag="data-drag" class="thing">
+      <div class="circle facebook-messenger-avatar facebook-messenger-avatar-type0">
+        <img class="facebook-messenger-avatar" src="https://nguyenhungplus.com/chat-fb/facebook-messenger.svg" />
+      </div>
+      <div class="content">
+        <div class="inside">
+          <div class="fb-page" data-width="310" data-height="310" data-href="https://www.facebook.com/SmartPhone-Thanh-Phong-520022775180436/?modal=admin_todo_tour " data-tabs="messages" data-small-header="true" data-hide-cover="false" data-show-facepile="true"
+            data-adapt-container-width="true">
+            <div class="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/blogcongdongcom"><a href="https://www.facebook.com/blogcongdongcom">Loading...</a></blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="magnet-zone">
+      <div class="magnet"></div>
+    </div>
+  </div>
+  <link type='text/css' rel='stylesheet' href='https://nguyenhungplus.com/chat-fb/style.css' />
+  <script type='text/javascript' src='https://nguyenhungplus.com/chat-fb/jquery.event.move.js'></script>
+  <script type='text/javascript' src='https://nguyenhungplus.com/chat-fb//rebound.min.js'></script>
+  <script type='text/javascript' src='https://nguyenhungplus.com/chat-fb/index.js'></script>

@@ -1,0 +1,103 @@
+<% include ../layout/header.ejs %>
+<div class="header-top">
+ <div class="wrap">
+  <div class="logo">
+    <%include ../page/Logo %>
+    </div>
+    <div class="cssmenu">
+    <% include ../page/Menu %>
+  </div>
+  <div class="clear"></div>
+</div>
+ </div>
+      <%include ../page/Category %>
+     <div class="clear"></div>
+<!-- Header End -->
+
+<div id="maincontainer">
+  <section id="product">
+    <div class="container">
+     <!--  breadcrumb -->
+      <ul class="breadcrumb">
+        <li>
+          <a href="#">Trang chủ</a>
+
+        </li>
+        <li class="active">Đặt hàng</li>
+      </ul>
+      <!-- Contact Us-->
+      <br>
+      <h1 class="heading1"><span class="maintext"></span><span class="subtext">Hãy nhập thông tin của bản và form dưới đây:</span></h1>
+      </br>
+      <div class="row">
+        <% if(success_msg != ''){ %>
+            <div class="alert alert-success"><%= success_msg%></div>
+        <% } %>
+        <% if(errors) { %>
+        <div class="alert alert-danger">
+            <% errors.forEach(function(e){ %>
+                <%= e.msg %> <br/>
+            <%});%>
+        </div>
+        <% };%>
+        <div class="span9">
+          <form class="form-horizontal " action="" method="post" onsubmit="myFunction()">
+            <fieldset>
+              <div class="control-group">
+                <label for="name" class="control-label">Họ và Tên<span class="required"></span></label>
+                <div class="controls">
+                  <input type="text"  class="required" id="name" value="" name="name" autofocus="autofocus">
+                </div>
+              </div>
+              <div class="control-group">
+                <label for="email" class="control-label">Email <span class="required"></span></label>
+                <div class="controls">
+                  <input type="email"  class="required email" id="email" value="" name="email">
+                </div>
+              </div>
+              <div class="control-group">
+                <label for="url" class="control-label">Số điện thoại liên hệ</label>
+                <div class="controls">
+                  <input type="text" id="phone" value="" name="phone">
+                </div>
+              </div>
+              <div class="control-group">
+                <label for="message" class="control-label">Lời nhắn</label>
+                <div class="controls">
+                  <textarea  class="required" rows="6" cols="40" id="message" name="message"></textarea>
+                </div>
+              </div>
+              <div class="control-group">
+                <label for="url" class="control-label">Ngày đặt hàng</label>
+                <div class="controls">
+                  <input type="datetime" id="today" value="" name="date" readonly="readonly >
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-9 col-md-8 padding-bottom-30 " style="  left: 248px; margin-bottom: 28px;">
+                  <div class="text-left">
+                      <button type="submit" class="btn btn-primary">Đặt hàng</button>
+                      <button type="button" class="btn">Hủy bỏ</button>
+                  </div>
+              </div>
+              <!-- <div class="form-actions">
+                <input class="btn btn-orange" type="submit" value="Submit" id="submit_id">
+                <input class="btn" type="reset" value="Reset">
+              </div> -->
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  function myFunction() {
+  alert("Bạn đã đặt hàng thành công");
+  }
+</script>
+<script>
+  let today = new Date().toISOString().substr(0, 10);
+  document.querySelector("#today").value = today;
+</script>
+<!-- Footer -->
+<% include ../layout/footer.ejs %>
