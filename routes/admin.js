@@ -64,7 +64,7 @@ passport.use(new LocalStrategy({
                 if(user){
                      return done(null, username);
                 }else{
-                   return done(null, false, { message: 'Tài Khoản Bạn Nhập Không Đúng' });
+                   return done(null, false, { message: 'Tài Khoản Bạn Vừa Nhập Không Đúng' });
                 }
             });
           }else{
