@@ -1,0 +1,399 @@
+<% include ../layout/header.ejs %>
+<div class="header-top">
+  <div class="wrap">
+    <div class="logo">
+      <%include ../page/Logo %>
+    </div>
+    <div class="cssmenu">
+      <% include ../page/Menu %>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<% include ../page/Category %>
+<div class="clear"></div>
+
+<!-- BEGIN: PAGE CONTAINER -->
+
+<div class="c-layout-sidebar-content ">
+  <!-- BEGIN: PAGE CONTENT -->
+  <!-- BEGIN: CONTENT/SHOPS/SHOP-PRODUCT-DETAILS-1 -->
+  <div class="c-shop-product-details-2 c-opt-1">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="c-product-gallery">
+          <div class="c-product-gallery-content">
+            <div class="c-zoom">
+              <img src="upload/<%=data.img%>">
+            </div>
+            <div class="c-zoom">
+              <img src="upload/<%=data.img1%>">
+            </div>
+            <div class="c-zoom">
+              <img src="upload/<%=data.img2%>">
+            </div>
+            <div class="c-zoom">
+              <img src="upload/<%=data.img3%>">
+            </div>
+          </div>
+          <div class="row c-product-gallery-thumbnail">
+            <div class="col-xs-3 c-product-thumb">
+              <img src="upload/<%=data.img%>">
+            </div>
+            <div class="col-xs-3 c-product-thumb">
+              <img src="upload/<%= data.img1%>">
+            </div>
+            <div class="col-xs-3 c-product-thumb">
+              <img src="upload/<%= data.img2%>">
+            </div>
+            <div class="col-xs-3 c-product-thumb c-product-thumb-last">
+              <img src="upload/<%= data.img3%>">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="c-product-meta">
+          <div class="c-content-title-1">
+            <h3 class="c-font-uppercase c-font-bold">
+              <%= data.name %>
+            </h3>
+            <div class="c-line-left"></div>
+          </div>
+          <%
+              const formatter = new Intl.NumberFormat('vn-VN', {
+                currency: 'VND',
+              });
+            %>
+          <div class="c-product-price">
+            <p>
+              <%=formatter.format(data.price) + '₫'%>
+            </p>
+            <div class="col-sm-12 col-xs-12 c-margin-t-20">
+              <a href="/add-cart.<%=data._id%>"><button class="btn c-btn btn-lg c-font-bold c-font-white c-theme-btn c-btn-square c-font-uppercase">Thêm vào giỏ hàng</button></a>
+            </div>
+          </div>
+          <div class="c-product-short-desc">
+            <div class="row c-product-variant">
+              <div class="col-sm-12 col-xs-12 c-margin-t-20">
+                <!-- <div class="c-product-color"> -->
+                <p class="c-product-meta-label c-font-uppercase c-font-bold style" style="font-weight: bold; font-size:23px">Thông tin cơ bản</p>
+                <!-- <div> -->
+              </div>
+              <div class="col-sm-12 col-xs-12 c-margin-t-20">
+                <!-- <div class="c-product-color"> -->
+                <p class="cauhinh-trai">Màn hình: </p>
+                <p class="cauhinh-phai">
+                  <%=data.congnghemanhinh %>
+                </p>
+                <!-- <div> -->
+              </div>
+              <hr />
+              <div class="col-sm-12 col-xs-12 c-margin-t-20">
+                <!-- <div class="c-product-color"> -->
+                <p class="cauhinh-trai">Hệ điều hành: </p>
+                <p class="cauhinh-phai">
+                  <%=data.hedieuhanh %>
+                </p>
+                <!-- <div> -->
+              </div>
+              <div class="col-sm-12 col-xs-12 c-margin-t-20">
+                <!-- <div class="c-product-color"> -->
+                <p class="cauhinh-trai">Ram: </p>
+                <p class="cauhinh-phai">
+                  <%=data.ram %>
+                </p>
+                <!-- <div> -->
+              </div>
+              <div class="col-sm-12 col-xs-12 c-margin-t-20">
+                <!-- <div class="c-product-color"> -->
+                <p class="cauhinh-trai">Camera sau: </p>
+                <p class="cauhinh-phai">
+                  <%=data.camerasau %>
+                </p>
+                <!-- <div> -->
+              </div>
+              <div class="col-sm-12 col-xs-12 c-margin-t-20">
+                <!-- <div class="c-product-color"> -->
+                <p class="cauhinh-trai">Camera trước: </p>
+                <p class="cauhinh-phai">
+                  <%=data.cameratruoc %>
+                </p>
+                <!-- <div> -->
+              </div>
+            </div>
+          </div>
+          <style>
+            .row.c-product-variant {
+              padding: 0 40px;
+            }
+
+            p.cauhinh-trai {
+              float: left;
+              width: 35%;
+            }
+
+            .col-sm-12.col-xs-12.c-margin-t-20 {
+              padding: 2px 0px;
+              border-bottom: 1px solid;
+              border-color: #64585845;
+              font-weight: 600;
+            }
+
+            .cauhinh {
+              padding: 24px 0px 0px 320px;
+              border-bottom: 1px solid;
+              border-color: #64585845;
+              font-weight: 600;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+    <div class="c-product-add-cart c-margin-t-20">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- END: CONTENT/SHOPS/SHOP-PRODUCT-DETAILS-1 -->
+
+<!-- BEGIN: CONTENT/SHOPS/SHOP-PRODUCT-TAB-2 -->
+<div class="c-content-box c-size-md c-no-padding c-margin-t-60">
+  <div class="c-shop-product-tab-1" role="tabpanel">
+    <div class="c-product-tab-container">
+      <ul class="nav nav-justified" role="tablist">
+        <li role="presentation" class="active">
+          <a class="c-font-uppercase c-font-bold" href="#tab-1" role="tab" data-toggle="tab">Đánh giá chi tiết</a>
+        </li>
+        <li role="presentation">
+          <a class="c-font-uppercase c-font-bold" href="#tab-2" role="tab" data-toggle="tab">Cấu hình</a>
+        </li>
+        <li role="presentation">
+          <a class="c-font-uppercase c-font-bold" href="#tab-3" role="tab" data-toggle="tab">Bình luận</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+        <div class="c-product-desc c-center c-opt-2">
+          <%- data.des %>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="tab-2">
+        <!-- Cau hinh -->
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Công nghệ màn hình: </p>
+          <p class="cauhinh-phai">
+            <%=data.congnghemanhinh %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <!-- <div class="c-product-color"> -->
+          <p class="cauhinh-trai">Độ phân giải: </p>
+          <p class="cauhinh-phai">
+            <%=data.dophangiai %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Màn hình rộng: </p>
+          <p class="cauhinh-phai">
+            <%=data.manhinhrong %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Camera sau: </p>
+          <p class="cauhinh-phai">
+            <%=data.camerasau %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Quay phim: </p>
+          <p class="cauhinh-phai">
+            <%=data.quayphim %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Đèn flash: </p>
+          <p class="cauhinh-phai">
+            <%=data.denflash %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Chụp ảnh nâng cao: </p>
+          <p class="cauhinh-phai">
+            <%=data.chupanhnangcao %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Camera trước: </p>
+          <p class="cauhinh-phai">
+            <%=data.cameratruoc %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Video Call: </p>
+          <p class="cauhinh-phai">
+            <%=data.videocall %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Hệ điều hành: </p>
+          <p class="cauhinh-phai">
+            <%=data.hedieuhanh %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Chipset: </p>
+          <p class="cauhinh-phai">
+            <%=data.chipset %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Tốc độ cpu: </p>
+          <p class="cauhinh-phai">
+            <%=data.tocdocpu %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Chip đồ họa: </p>
+          <p class="cauhinh-phai">
+            <%=data.chipdohoa %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Ram: </p>
+          <p class="cauhinh-phai">
+            <%=data.ram %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Bộ nhớ trong: </p>
+          <p class="cauhinh-phai">
+            <%=data.bonhotrong %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Bộ nhớ khả dụng: </p>
+          <p class="cauhinh-phai">
+            <%=data.bonhokhadung %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Thẻ nhớ ngoài: </p>
+          <p class="cauhinh-phai">
+            <%=data.thenhongoai %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Mạng di động: </p>
+          <p class="cauhinh-phai">
+            <%=data.mangdidong %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Sim: </p>
+          <p class="cauhinh-phai">
+            <%=data.sim %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Wifi: </p>
+          <p class="cauhinh-phai">
+            <%=data.wifi %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">GPS: </p>
+          <p class="cauhinh-phai">
+            <%=data.gps %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Bluetooth: </p>
+          <p class="cauhinh-phai">
+            <%=data.bluetooth %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Cổng kết nối: </p>
+          <p class="cauhinh-phai">
+            <%=data.congketnoi %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Jack tai nghe: </p>
+          <p class="cauhinh-phai">
+            <%=data.jacktainghe %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Thiết kế: </p>
+          <p class="cauhinh-phai">
+            <%=data.thietke %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Kích thước: </p>
+          <p class="cauhinh-phai">
+            <%=data.kichthuoc %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Trọng lượng: </p>
+          <p class="cauhinh-phai">
+            <%=data.trongluong %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Dung lượng pin: </p>
+          <p class="cauhinh-phai">
+            <%=data.dungluongpin %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Loại pin: </p>
+          <p class="cauhinh-phai">
+            <%=data.loaipin %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Bảo mật: </p>
+          <p class="cauhinh-phai">
+            <%=data.baomat %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Radio: </p>
+          <p class="cauhinh-phai">
+            <%=data.radio %>
+          </p>
+        </div>
+        <div class="cauhinh">
+          <p class="cauhinh-trai">Thời điểm ra mắt: </p>
+          <p class="cauhinh-phai">
+            <%=data.thoidiemramat %>
+          </p>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="tab-3">
+        <div class="c-product-tab-container">
+          <h3 class="c-font-uppercase c-font-bold c-font-22 c-center c-margin-b-40 c-margin-t-40">Bình luận về sản phẩm </h3>
+          <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/<%= data._id %>" data-width="auto" data-numposts="8"></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- END: CONTENT/SHOPS/SHOP-PRODUCT-TAB-2 -->
+  <!-- END: PAGE CONTENT -->
+</div>
+</div>
+</div>
+<!-- END: PAGE CONTAINER -->
+
+<!-- BEGIN: LAYOUT/FOOTERS/FOOTER-6 -->
+
+<% include ../layout/footer.ejs %>
