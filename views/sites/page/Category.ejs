@@ -1,0 +1,9 @@
+<div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue"><li class="showhide" style="display: none;"><span class="title">MENU</span><span class="icon1"></span><span class="icon2"></span></li>
+      <%cate.forEach(function(data){%>
+        <li style="display: inline-block;"><a class="color1" href="/danh-muc/<%=data.name %>.<%=data._id %>.html"><%=data.name%></a></li>
+        <%});%>
+  </div>
+</div>
