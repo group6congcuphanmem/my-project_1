@@ -4,7 +4,7 @@ var router = express.Router();
 var Cate = require('../model/Cate.js');
 var Slides = require('../model/Slides.js');
 var Menu = require('../model/Menu.js');
-
+//funtion chuyen doi dau tieng Viet
 function bodauTiengViet(str) {
   str = str.toLowerCase();
   str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
