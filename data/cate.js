@@ -3,7 +3,7 @@ var mongoose =require('mongoose');
 
 mongoose.connect("mongodb://shopping1:Phong01232210125@ds129484.mlab.com:29484/shopping1");
 Cate.create([
-  {name:"iPhone",nameKhongDau:"iphone",},
+  {name:"iPhone",TenSanPhamKhongDau:"iphone",},
   {name:"SamSung",nameKhongDau:"sam-sung"},
   {name:"OPPO",nameKhongDau:"op-po"},
   {name:"NOKIA",nameKhongDau:"no-ki-a"},
