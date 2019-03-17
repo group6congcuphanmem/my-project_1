@@ -64,11 +64,11 @@ passport.use(new LocalStrategy({
                 if(user){
                      return done(null, username);
                 }else{
-                   return done(null, false, { message: 'Tài Khoản Không Đúng' });
+                   return done(null, false, { message: 'Tài Khoản Bạn Vừa Nhập Không Đúng' });
                 }
             });
           }else{
-             return done(null, false, { message: 'Tài Khoản Không Đúng' });
+             return done(null, false, { message: 'Tài Khoản Bạn Nhập Không Đúng' });
           }
       });
   }
@@ -84,7 +84,7 @@ passport.use('local.signup',new LocalStrategy({
       return done(err);
     }
     if(user){
-      return done(null,false,{ message:'Email đã tồn tại' });
+      return done(null,false,{ message:'Email đã được sử dụng' });
     }
     var newUser =new User();
     newUser.email=email;
@@ -130,4 +130,13 @@ function checkAdmin(req, res, next){
     }
 }
 
+
+function checkAdmin1(req, res, next){
+
+  if(req.isAuthenticated()){
+    next();
+  }else{
+    res.redirect('/admin/dang-nhap.html');
+  }
+}
 module.exports = router;

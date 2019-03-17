@@ -57,7 +57,7 @@ router.get('/them-news.html',  checkAdmin,function(req, res) {
 var cpUpload = upload.fields([{ name: 'img', maxCount: 1 }, { name: 'img1', maxCount: 8 }])
 router.post('/them-news.html', cpUpload, function(req, res) {
   //req.checkBody('hinh', 'Hình không được rổng').notEmpty();
-  req.checkBody('des', 'Chi tiết không được rổng').notEmpty();
+  req.checkBody('des', 'Chi tiết không được để trống').notEmpty();
   req.checkBody('author', 'Người đăng không được rổng').notEmpty();
   console.log(req.file);
   var errors = req.validationErrors();
